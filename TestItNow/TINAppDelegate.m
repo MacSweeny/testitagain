@@ -7,7 +7,7 @@
 //
 
 #import "TINAppDelegate.h"
-#import "ViewController.h"
+#import "TINProductsViewController.h"
 
 @interface TINAppDelegate ()
 
@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ViewController *rootVC = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    TINProductsViewController *rootVC = [[TINProductsViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootVC];
     [self.window makeKeyAndVisible];
     

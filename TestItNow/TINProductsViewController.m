@@ -1,23 +1,23 @@
 //
-//  ViewController.m
+//  TINProductsViewController.m
 //  TestItNow
 //
 //  Created by Michael Soares on 7/9/15.
 //  Copyright (c) 2015 Postmates. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TINProductsViewController.h"
 #import "TINProducts.h"
 #import "TINProductTableViewCell.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TINProductsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSArray *products;
 
 @end
 
-@implementation ViewController
+@implementation TINProductsViewController
 
 - (void)viewDidLoad
 {
