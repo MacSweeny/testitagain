@@ -17,7 +17,6 @@
 		B54146E81B4F49B500C66EA1 /* TINProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146E71B4F49B500C66EA1 /* TINProductTableViewCell.m */; };
 		B54146EB1B4F4EBD00C66EA1 /* TINSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */; };
 		B55AB24D1B5019E400AE75D4 /* TINConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B55AB24C1B5019E400AE75D4 /* TINConstants.m */; };
-		B55AB2511B501C7600AE75D4 /* TINURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B55AB2501B501C7600AE75D4 /* TINURLCache.m */; };
 		B55AB2531B50235700AE75D4 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B55AB2521B50235700AE75D4 /* products.json */; };
 		B55AB2561B503DEA00AE75D4 /* UIImage+TIN.m in Sources */ = {isa = PBXBuildFile; fileRef = B55AB2551B503DEA00AE75D4 /* UIImage+TIN.m */; };
 /* End PBXBuildFile section */
@@ -54,8 +53,6 @@
 		B55AB24B1B5019E400AE75D4 /* TINConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINConstants.h; sourceTree = "<group>"; };
 		B55AB24C1B5019E400AE75D4 /* TINConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINConstants.m; sourceTree = "<group>"; };
 		B55AB24E1B501A9300AE75D4 /* TestItNow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestItNow-Prefix.pch"; sourceTree = "<group>"; };
-		B55AB24F1B501C7600AE75D4 /* TINURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINURLCache.h; sourceTree = "<group>"; };
-		B55AB2501B501C7600AE75D4 /* TINURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINURLCache.m; sourceTree = "<group>"; };
 		B55AB2521B50235700AE75D4 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		B55AB2541B503DEA00AE75D4 /* UIImage+TIN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TIN.h"; sourceTree = "<group>"; };
 		B55AB2551B503DEA00AE75D4 /* UIImage+TIN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TIN.m"; sourceTree = "<group>"; };
@@ -123,8 +120,6 @@
 				B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */,
 				B55AB24B1B5019E400AE75D4 /* TINConstants.h */,
 				B55AB24C1B5019E400AE75D4 /* TINConstants.m */,
-				B55AB24F1B501C7600AE75D4 /* TINURLCache.h */,
-				B55AB2501B501C7600AE75D4 /* TINURLCache.m */,
 				B55AB2521B50235700AE75D4 /* products.json */,
 				B55AB2541B503DEA00AE75D4 /* UIImage+TIN.h */,
 				B55AB2551B503DEA00AE75D4 /* UIImage+TIN.m */,
@@ -262,7 +257,6 @@
 				B55AB2561B503DEA00AE75D4 /* UIImage+TIN.m in Sources */,
 				B54146C31B4F3E9F00C66EA1 /* ViewController.m in Sources */,
 				B54146C01B4F3E9F00C66EA1 /* TINAppDelegate.m in Sources */,
-				B55AB2511B501C7600AE75D4 /* TINURLCache.m in Sources */,
 				B54146EB1B4F4EBD00C66EA1 /* TINSessionManager.m in Sources */,
 				B54146BD1B4F3E9F00C66EA1 /* main.m in Sources */,
 				B55AB24D1B5019E400AE75D4 /* TINConstants.m in Sources */,

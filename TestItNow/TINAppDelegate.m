@@ -8,7 +8,6 @@
 
 #import "TINAppDelegate.h"
 #import "ViewController.h"
-#import "TINURLCache.h"
 
 @interface TINAppDelegate ()
 
@@ -18,9 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // image cache
-    [NSURLCache setSharedURLCache:[TINURLCache standardURLCache]];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     ViewController *rootVC = [[ViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootVC];

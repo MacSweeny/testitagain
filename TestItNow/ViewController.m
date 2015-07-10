@@ -45,7 +45,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50.0f;
+    return 100.0f;
 }
 
 #pragma mark - UITableViewDataSource
@@ -58,9 +58,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
     TINProductTableViewCell *cell = [TINProductTableViewCell reusableCellForTableView:tableView];
-    [tableView cellForRowAtIndexPath:indexPath];
     NSDictionary *product = [self.products objectAtIndex:indexPath.row];
-    [cell setProduct:product forTableView:tableView indexPath:indexPath];
+    cell.product = product;
     return cell;
 }
 
