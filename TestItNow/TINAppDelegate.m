@@ -1,23 +1,26 @@
 //
-//  AppDelegate.m
+//  TINAppDelegate.m
 //  TestItNow
 //
 //  Created by Michael Soares on 7/9/15.
 //  Copyright (c) 2015 Postmates. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "TINAppDelegate.h"
 #import "ViewController.h"
+#import "TINURLCache.h"
 
-@interface AppDelegate ()
+@interface TINAppDelegate ()
 
 @end
 
-@implementation AppDelegate
-
+@implementation TINAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // image cache
+    [NSURLCache setSharedURLCache:[TINURLCache standardURLCache]];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     ViewController *rootVC = [[ViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootVC];

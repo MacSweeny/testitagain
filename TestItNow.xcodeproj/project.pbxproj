@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B54146BD1B4F3E9F00C66EA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BC1B4F3E9F00C66EA1 /* main.m */; };
-		B54146C01B4F3E9F00C66EA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BF1B4F3E9F00C66EA1 /* AppDelegate.m */; };
+		B54146C01B4F3E9F00C66EA1 /* TINAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */; };
 		B54146C31B4F3E9F00C66EA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146C21B4F3E9F00C66EA1 /* ViewController.m */; };
 		B54146C81B4F3E9F00C66EA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54146C71B4F3E9F00C66EA1 /* Images.xcassets */; };
 		B54146CB1B4F3E9F00C66EA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54146C91B4F3E9F00C66EA1 /* LaunchScreen.xib */; };
 		B54146D71B4F3E9F00C66EA1 /* TestItNowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146D61B4F3E9F00C66EA1 /* TestItNowTests.m */; };
 		B54146E51B4F46A200C66EA1 /* TINProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146E41B4F46A200C66EA1 /* TINProducts.m */; };
-		B54146E81B4F49B500C66EA1 /* TINTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146E71B4F49B500C66EA1 /* TINTableViewCell.m */; };
+		B54146E81B4F49B500C66EA1 /* TINProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146E71B4F49B500C66EA1 /* TINProductTableViewCell.m */; };
 		B54146EB1B4F4EBD00C66EA1 /* TINSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */; };
+		B55AB24D1B5019E400AE75D4 /* TINConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B55AB24C1B5019E400AE75D4 /* TINConstants.m */; };
+		B55AB2511B501C7600AE75D4 /* TINURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B55AB2501B501C7600AE75D4 /* TINURLCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,12 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6546DC8B6163897D0492DE19 /* Pods_TestItNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestItNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54146B71B4F3E9F00C66EA1 /* TestItNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestItNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54146BB1B4F3E9F00C66EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54146BC1B4F3E9F00C66EA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B54146BE1B4F3E9F00C66EA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B54146BF1B4F3E9F00C66EA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B54146BE1B4F3E9F00C66EA1 /* TINAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINAppDelegate.h; sourceTree = "<group>"; };
+		B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINAppDelegate.m; sourceTree = "<group>"; };
 		B54146C11B4F3E9F00C66EA1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B54146C21B4F3E9F00C66EA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B54146C71B4F3E9F00C66EA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -44,10 +45,15 @@
 		B54146D61B4F3E9F00C66EA1 /* TestItNowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestItNowTests.m; sourceTree = "<group>"; };
 		B54146E31B4F46A200C66EA1 /* TINProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINProducts.h; sourceTree = "<group>"; };
 		B54146E41B4F46A200C66EA1 /* TINProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINProducts.m; sourceTree = "<group>"; };
-		B54146E61B4F49B500C66EA1 /* TINTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINTableViewCell.h; sourceTree = "<group>"; };
-		B54146E71B4F49B500C66EA1 /* TINTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINTableViewCell.m; sourceTree = "<group>"; };
+		B54146E61B4F49B500C66EA1 /* TINProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINProductTableViewCell.h; sourceTree = "<group>"; };
+		B54146E71B4F49B500C66EA1 /* TINProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINProductTableViewCell.m; sourceTree = "<group>"; };
 		B54146E91B4F4EBD00C66EA1 /* TINSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINSessionManager.h; sourceTree = "<group>"; };
 		B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINSessionManager.m; sourceTree = "<group>"; };
+		B55AB24B1B5019E400AE75D4 /* TINConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINConstants.h; sourceTree = "<group>"; };
+		B55AB24C1B5019E400AE75D4 /* TINConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINConstants.m; sourceTree = "<group>"; };
+		B55AB24E1B501A9300AE75D4 /* TestItNow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestItNow-Prefix.pch"; sourceTree = "<group>"; };
+		B55AB24F1B501C7600AE75D4 /* TINURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINURLCache.h; sourceTree = "<group>"; };
+		B55AB2501B501C7600AE75D4 /* TINURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINURLCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,6 @@
 		97D4EF02CC54C774EA9F4B31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6546DC8B6163897D0492DE19 /* Pods_TestItNow.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,8 +103,8 @@
 		B54146B91B4F3E9F00C66EA1 /* TestItNow */ = {
 			isa = PBXGroup;
 			children = (
-				B54146BE1B4F3E9F00C66EA1 /* AppDelegate.h */,
-				B54146BF1B4F3E9F00C66EA1 /* AppDelegate.m */,
+				B54146BE1B4F3E9F00C66EA1 /* TINAppDelegate.h */,
+				B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */,
 				B54146C11B4F3E9F00C66EA1 /* ViewController.h */,
 				B54146C21B4F3E9F00C66EA1 /* ViewController.m */,
 				B54146C71B4F3E9F00C66EA1 /* Images.xcassets */,
@@ -107,10 +112,14 @@
 				B54146BA1B4F3E9F00C66EA1 /* Supporting Files */,
 				B54146E31B4F46A200C66EA1 /* TINProducts.h */,
 				B54146E41B4F46A200C66EA1 /* TINProducts.m */,
-				B54146E61B4F49B500C66EA1 /* TINTableViewCell.h */,
-				B54146E71B4F49B500C66EA1 /* TINTableViewCell.m */,
+				B54146E61B4F49B500C66EA1 /* TINProductTableViewCell.h */,
+				B54146E71B4F49B500C66EA1 /* TINProductTableViewCell.m */,
 				B54146E91B4F4EBD00C66EA1 /* TINSessionManager.h */,
 				B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */,
+				B55AB24B1B5019E400AE75D4 /* TINConstants.h */,
+				B55AB24C1B5019E400AE75D4 /* TINConstants.m */,
+				B55AB24F1B501C7600AE75D4 /* TINURLCache.h */,
+				B55AB2501B501C7600AE75D4 /* TINURLCache.m */,
 			);
 			path = TestItNow;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 			children = (
 				B54146BB1B4F3E9F00C66EA1 /* Info.plist */,
 				B54146BC1B4F3E9F00C66EA1 /* main.m */,
+				B55AB24E1B501A9300AE75D4 /* TestItNow-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,10 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54146C31B4F3E9F00C66EA1 /* ViewController.m in Sources */,
-				B54146C01B4F3E9F00C66EA1 /* AppDelegate.m in Sources */,
+				B54146C01B4F3E9F00C66EA1 /* TINAppDelegate.m in Sources */,
+				B55AB2511B501C7600AE75D4 /* TINURLCache.m in Sources */,
 				B54146EB1B4F4EBD00C66EA1 /* TINSessionManager.m in Sources */,
 				B54146BD1B4F3E9F00C66EA1 /* main.m in Sources */,
-				B54146E81B4F49B500C66EA1 /* TINTableViewCell.m in Sources */,
+				B55AB24D1B5019E400AE75D4 /* TINConstants.m in Sources */,
+				B54146E81B4F49B500C66EA1 /* TINProductTableViewCell.m in Sources */,
 				B54146E51B4F46A200C66EA1 /* TINProducts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +317,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TestItNow/TestItNow-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -349,6 +362,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/TestItNow/TestItNow-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

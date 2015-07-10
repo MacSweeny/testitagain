@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "TINProducts.h"
-#import "TINTableViewCell.h"
+#import "TINProductTableViewCell.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -62,7 +62,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
-    TINTableViewCell *cell = [TINTableViewCell reusableCellForTableView:tableView];
+    TINProductTableViewCell *cell = [TINProductTableViewCell reusableCellForTableView:tableView];
     cell.product = [self.products objectAtIndex:indexPath.row];
     return cell;
 }

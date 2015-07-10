@@ -1,33 +1,33 @@
 //
-//  TINTableViewCell.m
+//  TINProductTableViewCell.m
 //  TestItNow
 //
 //  Created by Michael Soares on 7/9/15.
 //  Copyright (c) 2015 Postmates. All rights reserved.
 //
 
-#import "TINTableViewCell.h"
+#import "TINProductTableViewCell.h"
 #import "TINSessionManager.h"
 
-@interface TINTableViewCell ()
+@interface TINProductTableViewCell ()
 
 @property(nonatomic, strong) NSURLSessionDataTask *imageFetchTask;
 
 @end
 
-@implementation TINTableViewCell
+@implementation TINProductTableViewCell
 
 + (NSString *)reuseIdentifier
 {
     return NSStringFromClass([self class]);
 }
 
-+ (TINTableViewCell *)reusableCellForTableView:(UITableView *)tableView
++ (TINProductTableViewCell *)reusableCellForTableView:(UITableView *)tableView
 {
-    TINTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self reuseIdentifier]];
+    TINProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self reuseIdentifier]];
     
     if (!cell) {
-        cell = [[TINTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+        cell = [[TINProductTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                        reuseIdentifier:[self reuseIdentifier]];
     }
     
@@ -58,9 +58,11 @@
     __weak typeof(self) weakSelf = self;
     self.imageFetchTask = [[TINSessionManager sharedInstance] fetchImageForURL:imageURL
                                                                     completion:^(UIImage *image, NSError *error) {
-                                                                        dispatch_async(dispatch_get_main_queue(), ^{
-                                                                            weakSelf.imageView.image = image;
-                                                                        });
+                                                                        if (!error) {
+                                                                            dispatch_async(dispatch_get_main_queue(), ^{
+                                                                                weakSelf.imageView.image = image;
+                                                                            });
+                                                                        }
                                                                     }];
 }
 
