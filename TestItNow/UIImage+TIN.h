@@ -10,7 +10,7 @@
 
 @interface UIImage (TIN)
 
-- (UIImage *)imageScaledToSize:(CGSize)size;
-+ (UIImage *)imageWithColor:(UIColor *)color;
+- (UIImage *)TIN_imageScaledToSize:(CGSize)size;
++ (UIImage *)TIN_imageWithColor:(UIColor *)color;
 
 @end

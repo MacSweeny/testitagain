@@ -10,7 +10,7 @@
 
 @implementation UIImage (TIN)
 
-- (UIImage *)imageScaledToSize:(CGSize)size
+- (UIImage *)TIN_imageScaledToSize:(CGSize)size
 {
     UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
     [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
@@ -19,7 +19,7 @@
     return newImage;
 }
 
-+ (UIImage *)imageWithColor:(UIColor *)color
++ (UIImage *)TIN_imageWithColor:(UIColor *)color
 {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);

@@ -33,7 +33,7 @@
         cell = [[TINProductTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                               reuseIdentifier:[self reuseIdentifier]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.placeholderImage = [UIImage imageWithColor:[UIColor whiteColor]];
+        cell.placeholderImage = [UIImage TIN_imageWithColor:[UIColor whiteColor]];
     }
     
     return cell;
@@ -103,7 +103,7 @@
                                                                             // constrain it to a square, max height of the cell with some padding
                                                                             CGFloat side = CGRectGetHeight(weakSelf.bounds) - 2.0f;
                                                                             CGSize newSize = CGSizeMake(side, side);
-                                                                            UIImage *newImage = [image imageScaledToSize:newSize];
+                                                                            UIImage *newImage = [image TIN_imageScaledToSize:newSize];
                                                                             
                                                                             dispatch_async(dispatch_get_main_queue(), ^{
                                                                                 if ([tableView cellForRowAtIndexPath:indexPath]) {
