@@ -7,7 +7,7 @@
 //
 
 #import "TINAppDelegate.h"
-#import "ViewController.h"
+#import "TINProductsViewController.h"
 #import "TINURLCache.h"
 
 @interface TINAppDelegate ()
@@ -22,7 +22,7 @@
     [NSURLCache setSharedURLCache:[TINURLCache standardURLCache]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ViewController *rootVC = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    TINProductsViewController *rootVC = [[TINProductsViewController alloc] initWithNibName:nil bundle:nil];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootVC];
     [self.window makeKeyAndVisible];
     

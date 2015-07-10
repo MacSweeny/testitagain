@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B54146BD1B4F3E9F00C66EA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BC1B4F3E9F00C66EA1 /* main.m */; };
 		B54146C01B4F3E9F00C66EA1 /* TINAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */; };
-		B54146C31B4F3E9F00C66EA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146C21B4F3E9F00C66EA1 /* ViewController.m */; };
+		B54146C31B4F3E9F00C66EA1 /* TINProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146C21B4F3E9F00C66EA1 /* TINProductsViewController.m */; };
 		B54146C81B4F3E9F00C66EA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54146C71B4F3E9F00C66EA1 /* Images.xcassets */; };
 		B54146CB1B4F3E9F00C66EA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54146C91B4F3E9F00C66EA1 /* LaunchScreen.xib */; };
 		B54146D71B4F3E9F00C66EA1 /* TestItNowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146D61B4F3E9F00C66EA1 /* TestItNowTests.m */; };
@@ -38,8 +38,8 @@
 		B54146BC1B4F3E9F00C66EA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B54146BE1B4F3E9F00C66EA1 /* TINAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINAppDelegate.h; sourceTree = "<group>"; };
 		B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINAppDelegate.m; sourceTree = "<group>"; };
-		B54146C11B4F3E9F00C66EA1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B54146C21B4F3E9F00C66EA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B54146C11B4F3E9F00C66EA1 /* TINProductsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINProductsViewController.h; sourceTree = "<group>"; };
+		B54146C21B4F3E9F00C66EA1 /* TINProductsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINProductsViewController.m; sourceTree = "<group>"; };
 		B54146C71B4F3E9F00C66EA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B54146CA1B4F3E9F00C66EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B54146D01B4F3E9F00C66EA1 /* TestItNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestItNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +110,8 @@
 			children = (
 				B54146BE1B4F3E9F00C66EA1 /* TINAppDelegate.h */,
 				B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */,
-				B54146C11B4F3E9F00C66EA1 /* ViewController.h */,
-				B54146C21B4F3E9F00C66EA1 /* ViewController.m */,
+				B54146C11B4F3E9F00C66EA1 /* TINProductsViewController.h */,
+				B54146C21B4F3E9F00C66EA1 /* TINProductsViewController.m */,
 				B54146C71B4F3E9F00C66EA1 /* Images.xcassets */,
 				B54146C91B4F3E9F00C66EA1 /* LaunchScreen.xib */,
 				B54146BA1B4F3E9F00C66EA1 /* Supporting Files */,
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55AB2561B503DEA00AE75D4 /* UIImage+TIN.m in Sources */,
-				B54146C31B4F3E9F00C66EA1 /* ViewController.m in Sources */,
+				B54146C31B4F3E9F00C66EA1 /* TINProductsViewController.m in Sources */,
 				B54146C01B4F3E9F00C66EA1 /* TINAppDelegate.m in Sources */,
 				B55AB2511B501C7600AE75D4 /* TINURLCache.m in Sources */,
 				B54146EB1B4F4EBD00C66EA1 /* TINSessionManager.m in Sources */,
