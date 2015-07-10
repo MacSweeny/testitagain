@@ -28,7 +28,8 @@
     
     if (!cell) {
         cell = [[TINProductTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                       reuseIdentifier:[self reuseIdentifier]];
+                                              reuseIdentifier:[self reuseIdentifier]];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return cell;
@@ -41,20 +42,6 @@
     self.textLabel.text = nil;
     self.detailTextLabel.text = nil;
     self.imageView.image = [UIImage imageNamed:@"cellImage"];
-}
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    // make it a square with 1.0f margin on top/bottom
-    self.imageView.frame = ({
-        CGRect frame = self.imageView.frame;
-        frame.origin.y = 1.0f;
-        frame.size.height = CGRectGetHeight(self.bounds) - 2.0f;
-        frame.size.width = CGRectGetHeight(self.bounds) - 2.0f;
-        frame;
-    });
 }
 
 - (void)setProduct:(NSDictionary *)product
