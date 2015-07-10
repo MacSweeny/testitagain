@@ -58,7 +58,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
     TINProductTableViewCell *cell = [TINProductTableViewCell reusableCellForTableView:tableView];
-    [tableView cellForRowAtIndexPath:indexPath];
     NSDictionary *product = [self.products objectAtIndex:indexPath.row];
     [cell setProduct:product forTableView:tableView indexPath:indexPath];
     return cell;
