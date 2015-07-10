@@ -47,13 +47,13 @@
                                                  UIImage *image = nil;
                                                  
                                                  if (!error) {
-                                                     // dumb checking to make sure it's an image
+                                                     // dumb check to make sure it's an image
                                                      BOOL isImage = [response.MIMEType rangeOfString:@"image/"].location != NSNotFound;
                                                      
                                                      if (isImage) {
                                                          image = [UIImage imageWithData:data];
                                                      } else {
-                                                         error = [NSError errorWithDomain:@"com.postmates.TestItNow"
+                                                         error = [NSError errorWithDomain:TINConstantsNSURLErrorDomain
                                                                                      code:NSURLErrorCannotParseResponse
                                                                                  userInfo:@{NSLocalizedDescriptionKey: @"Could not parse image response"}];
                                                      }

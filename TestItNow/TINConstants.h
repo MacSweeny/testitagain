@@ -10,6 +10,6 @@
 
 @interface TINConstants : NSObject
 
-//extern NSString *const TINConstantsNSURLErrorDomain;
+extern NSString *const TINConstantsNSURLErrorDomain;
 
 @end

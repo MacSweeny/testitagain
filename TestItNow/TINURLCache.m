@@ -43,7 +43,7 @@ static NSTimeInterval const TINURLCacheExpirationIntervalOneMonth = TINURLCacheE
     if (canCache) {
         NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:cachedResponse.userInfo];
         
-        // force all images to be cached for a month
+        // force all images to be cached for a month regardless of what the response tells us to do
         userInfo[TINURLCacheExpirationDateKey] = [[NSDate date] dateByAddingTimeInterval:TINURLCacheExpirationIntervalOneMonth];
         NSCachedURLResponse *modifiedCachedResponse = [[NSCachedURLResponse alloc] initWithResponse:cachedResponse.response
                                                                                                data:cachedResponse.data

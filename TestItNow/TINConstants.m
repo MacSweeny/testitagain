@@ -10,6 +10,6 @@
 
 @implementation TINConstants
 
-//NSString *const TINConstantsNSURLErrorDomain = @"com.postmates.TestItNow";
+NSString *const TINConstantsNSURLErrorDomain = @"com.postmates.TestItNow";
 
 @end

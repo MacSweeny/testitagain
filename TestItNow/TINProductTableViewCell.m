@@ -43,6 +43,20 @@
     self.imageView.image = [UIImage imageNamed:@"cellImage"];
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    // make it a square with 1.0f margin on top/bottom
+    self.imageView.frame = ({
+        CGRect frame = self.imageView.frame;
+        frame.origin.y = 1.0f;
+        frame.size.height = CGRectGetHeight(self.bounds) - 2.0f;
+        frame.size.width = CGRectGetHeight(self.bounds) - 2.0f;
+        frame;
+    });
+}
+
 - (void)setProduct:(NSDictionary *)product
 {
     [self.imageFetchTask cancel];
