@@ -41,6 +41,7 @@
 
 - (void)prepareForReuse
 {
+    [super prepareForReuse];
     [self.imageFetchTask cancel];
     self.imageFetchTask = nil;
     self.textLabel.text = nil;
