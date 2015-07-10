@@ -97,29 +97,30 @@
     __weak typeof(self) weakSelf = self;
     [self.imageFetchTask cancel];
     self.imageFetchTask = nil;
-    self.imageFetchTask = [[TINSessionManager sharedInstance] fetchImageForURL:imageURL
-                                                                    completion:^(UIImage *image, NSError *error) {
-                                                                        if (!error) {
-                                                                            // constrain it to a square, max height of the cell with some padding
-                                                                            CGFloat side = CGRectGetHeight(weakSelf.bounds) - 2.0f;
-                                                                            CGSize newSize = CGSizeMake(side, side);
-                                                                            UIImage *newImage = [image TIN_imageScaledToSize:newSize];
-                                                                            
-                                                                            dispatch_async(dispatch_get_main_queue(), ^{
-                                                                                if ([tableView cellForRowAtIndexPath:indexPath]) {
-                                                                                    weakSelf.imageView.alpha = 0.0f;
-                                                                                    weakSelf.imageView.image = newImage;
-                                                                                    [UIView animateWithDuration:0.2
-                                                                                                          delay:0
-                                                                                                        options:UIViewAnimationOptionCurveEaseIn
-                                                                                                     animations:^{
-                                                                                                            weakSelf.imageView.alpha = 1.0f;
-                                                                                                        }
-                                                                                                     completion:nil];
-                                                                                }
-                                                                            });
-                                                                        }
-                                                                    }];
+    NSURLSessionDataTask *imageFetchTask = [[TINSessionManager sharedInstance] fetchImageForURL:imageURL
+                                                                                     completion:^(UIImage *image, NSError *error) {
+                                                                                         if (!error) {
+                                                                                             // constrain it to a square, max height of the cell with some padding
+                                                                                             CGFloat side = CGRectGetHeight(weakSelf.bounds) - 2.0f;
+                                                                                             CGSize newSize = CGSizeMake(side, side);
+                                                                                             image = [image TIN_imageScaledToSize:newSize];
+                                                                                             
+                                                                                             dispatch_async(dispatch_get_main_queue(), ^{
+                                                                                                 if ([tableView cellForRowAtIndexPath:indexPath]) {
+                                                                                                     weakSelf.imageView.alpha = 0.0f;
+                                                                                                     weakSelf.imageView.image = image;
+                                                                                                     [UIView animateWithDuration:0.2
+                                                                                                                           delay:0
+                                                                                                                         options:UIViewAnimationOptionCurveEaseIn
+                                                                                                                      animations:^{
+                                                                                                                          weakSelf.imageView.alpha = 1.0f;
+                                                                                                                      }
+                                                                                                                      completion:nil];
+                                                                                                 }
+                                                                                             });
+                                                                                         }
+                                                                                     }];
+    self.imageFetchTask = imageFetchTask;
 }
 
 @end
