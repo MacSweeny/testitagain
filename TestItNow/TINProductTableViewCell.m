@@ -34,7 +34,7 @@
     [super prepareForReuse];
     self.textLabel.text = nil;
     self.detailTextLabel.text = nil;
-    self.imageView.image = [UIImage imageWithColor:[UIColor whiteColor]];
+    self.imageView.image = [UIImage TIN_imageWithColor:[UIColor whiteColor]];
 }
 
 - (void)setProduct:(NSDictionary *)product
@@ -43,7 +43,7 @@
     
     self.textLabel.text = product[@"name"];
     self.detailTextLabel.text = product[@"category"];
-    self.imageView.image = [UIImage imageWithColor:[UIColor whiteColor]];
+    self.imageView.image = [UIImage TIN_imageWithColor:[UIColor whiteColor]];
 
     NSURL *imageURL = [NSURL URLWithString:product[@"image_url"]];
     
