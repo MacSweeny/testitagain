@@ -46,6 +46,13 @@
     self.tableView.frame = self.view.bounds;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50.0f;
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -56,7 +63,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
     TINProductTableViewCell *cell = [TINProductTableViewCell reusableCellForTableView:tableView];
-    cell.product = [self.products objectAtIndex:indexPath.row];
+    [tableView cellForRowAtIndexPath:indexPath];
+    NSDictionary *product = [self.products objectAtIndex:indexPath.row];
+    [cell setProduct:product forTableView:tableView indexPath:indexPath];
     return cell;
 }
 

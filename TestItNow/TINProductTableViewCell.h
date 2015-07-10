@@ -10,10 +10,10 @@
 
 @interface TINProductTableViewCell : UITableViewCell
 
-@property(nonatomic, strong) NSDictionary *product;
-
 + (NSString *)reuseIdentifier;
 
 + (TINProductTableViewCell *)reusableCellForTableView:(UITableView *)tableView;
+
+- (void)setProduct:(NSDictionary *)product forTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 @end
