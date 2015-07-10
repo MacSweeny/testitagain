@@ -47,12 +47,11 @@
 
     NSURL *imageURL = [NSURL URLWithString:product[@"image_url"]];
     
-    __weak typeof(self) weakSelf = self;
     [[TINSessionManager sharedInstance] fetchImageForURL:imageURL
                                               completion:^(UIImage *image, NSError *error) {
                                                   if (!error) {
                                                       dispatch_async(dispatch_get_main_queue(), ^{
-                                                          weakSelf.imageView.image = image;
+                                                          self.imageView.image = image;
                                                       });
                                                   }
                                               }];
