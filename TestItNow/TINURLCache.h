@@ -12,7 +12,7 @@
 
 /**
  * Returns a GINURLCache instance with a
- * 0 MB in-memory cache and 15 MB disk cache.
+ * 5 MB in-memory cache and 15 MB disk cache.
  */
 + (instancetype)standardURLCache;
 

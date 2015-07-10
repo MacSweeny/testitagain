@@ -19,7 +19,7 @@ static NSTimeInterval const TINURLCacheExpirationIntervalOneMonth = TINURLCacheE
     static TINURLCache *s_standardURLCache = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        s_standardURLCache = [[[self class] alloc] initWithMemoryCapacity:0
+        s_standardURLCache = [[[self class] alloc] initWithMemoryCapacity:(5 * 1024 * 1024)
                                                             diskCapacity:(15 * 1024 * 1024)
                                                                 diskPath:nil];
     });
