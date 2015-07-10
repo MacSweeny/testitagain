@@ -111,7 +111,8 @@
                                                                                     weakSelf.imageView.image = newImage;
                                                                                     [UIView animateWithDuration:0.2
                                                                                                           delay:0
-                                                                                                        options:UIViewAnimationOptionCurveEaseIn animations:^{
+                                                                                                        options:UIViewAnimationOptionCurveEaseIn
+                                                                                                     animations:^{
                                                                                                             weakSelf.imageView.alpha = 1.0f;
                                                                                                         }
                                                                                                      completion:nil];
