@@ -7,8 +7,9 @@
 //
 
 #import "TINSessionManager.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface TINSessionManager () <NSURLSessionDelegate>
+@interface TINSessionManager ()
 
 @property(nonatomic, strong) NSURLSession *session;
 
@@ -33,7 +34,7 @@
     
     if (self) {
         _session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
-                                                 delegate:self
+                                                 delegate:nil
                                             delegateQueue:nil];
     }
 
@@ -47,8 +48,8 @@
                                                  UIImage *image = nil;
                                                  
                                                  if (!error) {
-                                                     // dumb check to make sure it's an image
-                                                     BOOL isImage = [response.MIMEType rangeOfString:@"image/"].location != NSNotFound;
+                                                     CFStringRef uttype = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)response.MIMEType, NULL);
+                                                     BOOL isImage = UTTypeConformsTo(uttype, kUTTypeImage);
                                                      
                                                      if (isImage) {
                                                          image = [UIImage imageWithData:data];

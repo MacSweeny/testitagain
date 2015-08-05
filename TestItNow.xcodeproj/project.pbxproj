@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45684B5F1B67F41F002F137E /* TINProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45684B5E1B67F41F002F137E /* TINProductTableViewCell.xib */; };
 		B54146BD1B4F3E9F00C66EA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BC1B4F3E9F00C66EA1 /* main.m */; };
 		B54146C01B4F3E9F00C66EA1 /* TINAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */; };
 		B54146C31B4F3E9F00C66EA1 /* TINProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146C21B4F3E9F00C66EA1 /* TINProductsViewController.m */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45684B5E1B67F41F002F137E /* TINProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TINProductTableViewCell.xib; sourceTree = "<group>"; };
 		B54146B71B4F3E9F00C66EA1 /* TestItNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestItNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54146BB1B4F3E9F00C66EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B54146BC1B4F3E9F00C66EA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				B54146E41B4F46A200C66EA1 /* TINProducts.m */,
 				B54146E61B4F49B500C66EA1 /* TINProductTableViewCell.h */,
 				B54146E71B4F49B500C66EA1 /* TINProductTableViewCell.m */,
+				45684B5E1B67F41F002F137E /* TINProductTableViewCell.xib */,
 				B54146E91B4F4EBD00C66EA1 /* TINSessionManager.h */,
 				B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */,
 				B55AB24B1B5019E400AE75D4 /* TINConstants.h */,
@@ -242,6 +245,7 @@
 				B55AB2531B50235700AE75D4 /* products.json in Resources */,
 				B54146CB1B4F3E9F00C66EA1 /* LaunchScreen.xib in Resources */,
 				B54146C81B4F3E9F00C66EA1 /* Images.xcassets in Resources */,
+				45684B5F1B67F41F002F137E /* TINProductTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

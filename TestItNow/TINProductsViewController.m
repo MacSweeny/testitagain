@@ -31,6 +31,8 @@
     self.tableView = [[UITableView alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self.tableView registerNib:[UINib nibWithNibName:@"TINProductTableViewCell" bundle:nil]
+         forCellReuseIdentifier:[TINProductTableViewCell reuseIdentifier]];
     [self.view addSubview:self.tableView];
 }
 
@@ -38,7 +40,9 @@
 {
     [super viewDidLayoutSubviews];
     
-    self.tableView.frame = self.view.bounds;
+    CGRect frame = self.view.bounds;
+    frame.origin = CGPointZero;
+    self.tableView.frame = frame;
 }
 
 #pragma mark - UITableViewDelegate
@@ -57,7 +61,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {   
-    TINProductTableViewCell *cell = [TINProductTableViewCell reusableCellForTableView:tableView];
+    TINProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[TINProductTableViewCell reuseIdentifier]
+                                                                    forIndexPath:indexPath];
     NSDictionary *product = [self.products objectAtIndex:indexPath.row];
     [cell setProduct:product forTableView:tableView indexPath:indexPath];
     return cell;
