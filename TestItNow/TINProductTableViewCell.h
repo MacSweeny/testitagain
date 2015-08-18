@@ -10,10 +10,14 @@
 
 @interface TINProductTableViewCell : UITableViewCell
 
+@property(nonatomic, strong) IBOutlet UILabel *nameLabel;
+@property(nonatomic, strong) IBOutlet UILabel *categoryLabel;
+@property(nonatomic, strong) IBOutlet UIImageView *productImageView;
+
 + (NSString *)reuseIdentifier;
 
-+ (TINProductTableViewCell *)reusableCellForTableView:(UITableView *)tableView;
-
-- (void)setProduct:(NSDictionary *)product forTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
+- (void)setProduct:(NSDictionary *)product
+      forTableView:(UITableView *)tableView
+         indexPath:(NSIndexPath *)indexPath;
 
 @end

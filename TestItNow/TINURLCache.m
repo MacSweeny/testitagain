@@ -7,6 +7,7 @@
 //
 
 #import "TINURLCache.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 static NSString *const TINURLCacheExpirationDateKey = @"TINURLCacheExpirationDateKey";
 static NSTimeInterval const TINURLCacheExpirationIntervalOneDay = 60 * 60 * 24;
@@ -35,10 +36,11 @@ static NSTimeInterval const TINURLCacheExpirationIntervalOneMonth = TINURLCacheE
 - (void)storeCachedResponse:(NSCachedURLResponse *)cachedResponse forRequest:(NSURLRequest *)request
 {
     NSString *httpMethod = request.HTTPMethod;
-    NSString *mimeType = cachedResponse.response.MIMEType;
     
     // only cache GET requests for images
-    BOOL canCache = [httpMethod isEqualToString:@"GET"] && [mimeType rangeOfString:@"image/"].location != NSNotFound;
+    CFStringRef uttype = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)cachedResponse.response.MIMEType, NULL);
+    BOOL isImage = UTTypeConformsTo(uttype, kUTTypeImage);
+    BOOL canCache = [httpMethod isEqualToString:@"GET"] && isImage;
     
     if (canCache) {
         NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:cachedResponse.userInfo];
