@@ -12,7 +12,7 @@
 
 - (UIImage *)TIN_imageScaledToSize:(CGSize)size
 {
-    UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0f);
     [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

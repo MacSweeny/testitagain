@@ -28,9 +28,15 @@
 {
     self.nameLabel.text = product[@"name"];
     self.categoryLabel.text = product[@"category"];
-    self.productImageView.image = nil;
     
     NSURL *imageURL = [NSURL URLWithString:product[@"image_url"]];
+    
+    if ([self.imageURL isEqual:imageURL]) {
+        // do nothing else - image is already showing
+        return;
+    }
+    
+    self.productImageView.image = nil;
     self.imageURL = imageURL;
     
     __weak typeof(self) weakSelf = self;
@@ -39,6 +45,7 @@
                                                                     completion:^(UIImage *image, NSError *error) {
                                                                         if (!error) {
                                                                             image = [image TIN_imageScaledToSize:CGSizeMake(44, 44)];
+                                                                            weakSelf.imageFetchTask = nil;
                                                                             
                                                                             dispatch_async(dispatch_get_main_queue(), ^{
                                                                                 __strong typeof(weakSelf) strongSelf = weakSelf;
