@@ -390,6 +390,7 @@
 				INFOPLIST_FILE = TestItNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "eef29e23-331f-4f1d-93d5-df9efa99b6bd";
 			};
 			name = Debug;
 		};
