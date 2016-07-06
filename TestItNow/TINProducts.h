@@ -10,6 +10,6 @@
 
 @interface TINProducts : NSObject
 
-+ (NSArray *)products;
++ (nonnull NSArray<NSDictionary *> *)products;
 
 @end

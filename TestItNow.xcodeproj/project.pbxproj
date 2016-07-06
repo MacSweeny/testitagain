@@ -7,16 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B54146BD1B4F3E9F00C66EA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BC1B4F3E9F00C66EA1 /* main.m */; };
-		B54146C01B4F3E9F00C66EA1 /* TINAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */; };
-		B54146C31B4F3E9F00C66EA1 /* TINProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146C21B4F3E9F00C66EA1 /* TINProductsViewController.m */; };
+		9659BCB41D2C9FA6001A7D3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659BCB31D2C9FA6001A7D3B /* AppDelegate.swift */; };
+		9659BCB61D2CA058001A7D3B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659BCB51D2CA058001A7D3B /* ProductsViewController.swift */; };
+		9659BCB81D2CA1C7001A7D3B /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659BCB71D2CA1C7001A7D3B /* ProductTableViewCell.swift */; };
+		9659BCBA1D2CA4AC001A7D3B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659BCB91D2CA4AC001A7D3B /* SessionManager.swift */; };
 		B54146C81B4F3E9F00C66EA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54146C71B4F3E9F00C66EA1 /* Images.xcassets */; };
 		B54146CB1B4F3E9F00C66EA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54146C91B4F3E9F00C66EA1 /* LaunchScreen.xib */; };
 		B54146D71B4F3E9F00C66EA1 /* TestItNowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146D61B4F3E9F00C66EA1 /* TestItNowTests.m */; };
 		B54146E51B4F46A200C66EA1 /* TINProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146E41B4F46A200C66EA1 /* TINProducts.m */; };
-		B54146E81B4F49B500C66EA1 /* TINProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146E71B4F49B500C66EA1 /* TINProductTableViewCell.m */; };
-		B54146EB1B4F4EBD00C66EA1 /* TINSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */; };
-		B55AB24D1B5019E400AE75D4 /* TINConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B55AB24C1B5019E400AE75D4 /* TINConstants.m */; };
 		B55AB2531B50235700AE75D4 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B55AB2521B50235700AE75D4 /* products.json */; };
 		B55AB2561B503DEA00AE75D4 /* UIImage+TIN.m in Sources */ = {isa = PBXBuildFile; fileRef = B55AB2551B503DEA00AE75D4 /* UIImage+TIN.m */; };
 /* End PBXBuildFile section */
@@ -32,13 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9659BCB21D2C9FA6001A7D3B /* TestItNow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestItNow-Bridging-Header.h"; sourceTree = "<group>"; };
+		9659BCB31D2C9FA6001A7D3B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9659BCB51D2CA058001A7D3B /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		9659BCB71D2CA1C7001A7D3B /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		9659BCB91D2CA4AC001A7D3B /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		B54146B71B4F3E9F00C66EA1 /* TestItNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestItNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54146BB1B4F3E9F00C66EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B54146BC1B4F3E9F00C66EA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B54146BE1B4F3E9F00C66EA1 /* TINAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINAppDelegate.h; sourceTree = "<group>"; };
-		B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINAppDelegate.m; sourceTree = "<group>"; };
-		B54146C11B4F3E9F00C66EA1 /* TINProductsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINProductsViewController.h; sourceTree = "<group>"; };
-		B54146C21B4F3E9F00C66EA1 /* TINProductsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINProductsViewController.m; sourceTree = "<group>"; };
 		B54146C71B4F3E9F00C66EA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B54146CA1B4F3E9F00C66EA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B54146D01B4F3E9F00C66EA1 /* TestItNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestItNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,12 +44,6 @@
 		B54146D61B4F3E9F00C66EA1 /* TestItNowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestItNowTests.m; sourceTree = "<group>"; };
 		B54146E31B4F46A200C66EA1 /* TINProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINProducts.h; sourceTree = "<group>"; };
 		B54146E41B4F46A200C66EA1 /* TINProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINProducts.m; sourceTree = "<group>"; };
-		B54146E61B4F49B500C66EA1 /* TINProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINProductTableViewCell.h; sourceTree = "<group>"; };
-		B54146E71B4F49B500C66EA1 /* TINProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINProductTableViewCell.m; sourceTree = "<group>"; };
-		B54146E91B4F4EBD00C66EA1 /* TINSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINSessionManager.h; sourceTree = "<group>"; };
-		B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINSessionManager.m; sourceTree = "<group>"; };
-		B55AB24B1B5019E400AE75D4 /* TINConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINConstants.h; sourceTree = "<group>"; };
-		B55AB24C1B5019E400AE75D4 /* TINConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINConstants.m; sourceTree = "<group>"; };
 		B55AB24E1B501A9300AE75D4 /* TestItNow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestItNow-Prefix.pch"; sourceTree = "<group>"; };
 		B55AB2521B50235700AE75D4 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		B55AB2541B503DEA00AE75D4 /* UIImage+TIN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TIN.h"; sourceTree = "<group>"; };
@@ -105,24 +97,19 @@
 		B54146B91B4F3E9F00C66EA1 /* TestItNow */ = {
 			isa = PBXGroup;
 			children = (
-				B54146BE1B4F3E9F00C66EA1 /* TINAppDelegate.h */,
-				B54146BF1B4F3E9F00C66EA1 /* TINAppDelegate.m */,
-				B54146C11B4F3E9F00C66EA1 /* TINProductsViewController.h */,
-				B54146C21B4F3E9F00C66EA1 /* TINProductsViewController.m */,
+				9659BCB31D2C9FA6001A7D3B /* AppDelegate.swift */,
+				9659BCB51D2CA058001A7D3B /* ProductsViewController.swift */,
+				9659BCB71D2CA1C7001A7D3B /* ProductTableViewCell.swift */,
+				9659BCB91D2CA4AC001A7D3B /* SessionManager.swift */,
 				B54146C71B4F3E9F00C66EA1 /* Images.xcassets */,
 				B54146C91B4F3E9F00C66EA1 /* LaunchScreen.xib */,
 				B54146BA1B4F3E9F00C66EA1 /* Supporting Files */,
 				B54146E31B4F46A200C66EA1 /* TINProducts.h */,
 				B54146E41B4F46A200C66EA1 /* TINProducts.m */,
-				B54146E61B4F49B500C66EA1 /* TINProductTableViewCell.h */,
-				B54146E71B4F49B500C66EA1 /* TINProductTableViewCell.m */,
-				B54146E91B4F4EBD00C66EA1 /* TINSessionManager.h */,
-				B54146EA1B4F4EBD00C66EA1 /* TINSessionManager.m */,
-				B55AB24B1B5019E400AE75D4 /* TINConstants.h */,
-				B55AB24C1B5019E400AE75D4 /* TINConstants.m */,
 				B55AB2521B50235700AE75D4 /* products.json */,
 				B55AB2541B503DEA00AE75D4 /* UIImage+TIN.h */,
 				B55AB2551B503DEA00AE75D4 /* UIImage+TIN.m */,
+				9659BCB21D2C9FA6001A7D3B /* TestItNow-Bridging-Header.h */,
 			);
 			path = TestItNow;
 			sourceTree = "<group>";
@@ -131,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				B54146BB1B4F3E9F00C66EA1 /* Info.plist */,
-				B54146BC1B4F3E9F00C66EA1 /* main.m */,
 				B55AB24E1B501A9300AE75D4 /* TestItNow-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -198,6 +184,7 @@
 		B54146AF1B4F3E9F00C66EA1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Postmates;
 				TargetAttributes = {
@@ -255,12 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55AB2561B503DEA00AE75D4 /* UIImage+TIN.m in Sources */,
-				B54146C31B4F3E9F00C66EA1 /* TINProductsViewController.m in Sources */,
-				B54146C01B4F3E9F00C66EA1 /* TINAppDelegate.m in Sources */,
-				B54146EB1B4F4EBD00C66EA1 /* TINSessionManager.m in Sources */,
-				B54146BD1B4F3E9F00C66EA1 /* main.m in Sources */,
-				B55AB24D1B5019E400AE75D4 /* TINConstants.m in Sources */,
-				B54146E81B4F49B500C66EA1 /* TINProductTableViewCell.m in Sources */,
+				9659BCBA1D2CA4AC001A7D3B /* SessionManager.swift in Sources */,
+				9659BCB41D2C9FA6001A7D3B /* AppDelegate.swift in Sources */,
+				9659BCB61D2CA058001A7D3B /* ProductsViewController.swift in Sources */,
+				9659BCB81D2CA1C7001A7D3B /* ProductTableViewCell.swift in Sources */,
 				B54146E51B4F46A200C66EA1 /* TINProducts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,10 +372,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TestItNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestItNow/TestItNow-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -398,10 +386,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = TestItNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestItNow/TestItNow-Bridging-Header.h";
 			};
 			name = Release;
 		};
