@@ -10,7 +10,7 @@ import UIKit
 class ProductsViewController: UIViewController {
     
     var tableView: UITableView!
-    let products = TINProducts.products()
+    let products = TINProducts.products
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

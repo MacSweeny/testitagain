@@ -5,7 +5,7 @@
 //  Copyright © 2016 Postmates. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class SessionManager {
     
