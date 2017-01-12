@@ -12,16 +12,16 @@ class SessionManager {
     static let sharedInstance = SessionManager()
     static let errorDomain = "com.postmates.TestItNow"
     
-    private let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration(), delegate: nil, delegateQueue: nil)
+    fileprivate let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
     
-    func fetchImage(for url: NSURL, completion: ((image: UIImage?, error: NSError?) -> Void)?) -> NSURLSessionDataTask {
-        let task = session.dataTaskWithURL(url) { data, response, error in
+    func fetchImage(for url: URL, completion: ((_ image: UIImage?, _ error: NSError?) -> Void)?) -> URLSessionDataTask {
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
             var image: UIImage?
             var imageError = error
             
             if error == nil {
                 // dumb check to make sure it's an image
-                let isImage = response?.MIMEType?.containsString("image/") ?? false
+                let isImage = response?.mimeType?.contains("image/") ?? false
                 
                 if isImage, let data = data {
                     image = UIImage(data: data)
@@ -30,8 +30,8 @@ class SessionManager {
                 }
             }
             
-            completion?(image: image, error: imageError)
-        }
+            completion?(image, imageError as NSError?)
+        }) 
         task.resume()
         return task
     }

@@ -12,21 +12,21 @@ class ProductTableViewCell: UITableViewCell {
     static let reuseIdentifier = "Product"
     
     static func reusableCell(for tableView: UITableView) -> ProductTableViewCell {
-        let cell = ProductTableViewCell(style: .Subtitle, reuseIdentifier: reuseIdentifier)
-        cell.selectionStyle = .None
+        let cell = ProductTableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        cell.selectionStyle = .none
         return cell
     }
     
-    var product: [NSObject: AnyObject]? {
+    var product: [AnyHashable: Any]? {
         didSet {
             textLabel?.text = product?["name"] as? String
             detailTextLabel?.text = product?["category"] as? String
-            imageView?.image = UIImage.TIN_imageWithColor(.whiteColor())
+            imageView?.image = UIImage.TIN_imageWithColor(.white)
             
-            if let urlString = product?["image_url"] as? String, imageUrl = NSURL(string: urlString) {
+            if let urlString = product?["image_url"] as? String, let imageUrl = URL(string: urlString) {
                 SessionManager.sharedInstance.fetchImage(for: imageUrl, completion: { image, error in
                     if error == nil {
-                        dispatch_async(dispatch_get_main_queue(), {
+                        DispatchQueue.main.async(execute: {
                             self.imageView?.image = image
                         })
                     }
@@ -39,7 +39,7 @@ class ProductTableViewCell: UITableViewCell {
         super.prepareForReuse()
         textLabel?.text = nil
         detailTextLabel?.text = nil
-        imageView?.image = UIImage.TIN_imageWithColor(.whiteColor())
+        imageView?.image = UIImage.TIN_imageWithColor(.white)
     }
     
 }

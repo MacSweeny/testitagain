@@ -9,14 +9,14 @@
 import UIKit
 
 extension UIImage {
-    func TIN_imageScaledToSize(size: CGSize) -> UIImage {
+    func TIN_imageScaledToSize(_ size: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         defer { UIGraphicsEndImageContext() }
-        drawInRect(CGRect(origin: .zero, size: size))
-        return UIGraphicsGetImageFromCurrentImageContext()
+        draw(in: CGRect(origin: .zero, size: size))
+        return UIGraphicsGetImageFromCurrentImageContext()!
     }
     
-    class func TIN_imageWithColor(color: UIColor) -> UIImage {
+    class func TIN_imageWithColor(_ color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContext(rect.size)
         defer { UIGraphicsEndImageContext() }
@@ -24,6 +24,6 @@ extension UIImage {
         color.setFill()
         UIRectFill(rect)
         
-        return UIGraphicsGetImageFromCurrentImageContext()
+        return UIGraphicsGetImageFromCurrentImageContext()!
     }
 }

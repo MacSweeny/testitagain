@@ -12,7 +12,7 @@ class ProductsViewController: UIViewController {
     var tableView: UITableView!
     let products = TINProducts.products
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         title = "Test It Now"
     }
@@ -24,7 +24,7 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .whiteColor()
+        view.backgroundColor = .white
         
         tableView = UITableView()
         tableView.delegate = self
@@ -41,7 +41,7 @@ class ProductsViewController: UIViewController {
 
 extension ProductsViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
@@ -49,11 +49,11 @@ extension ProductsViewController: UITableViewDelegate {
 
 extension ProductsViewController: UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ProductTableViewCell.reusableCell(for: tableView)
         cell.product = products[indexPath.row]
         return cell

@@ -184,6 +184,7 @@
 				TargetAttributes = {
 					B54146B61B4F3E9F00C66EA1 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0820;
 					};
 					B54146CF1B4F3E9F00C66EA1 = {
 						CreatedOnToolsVersion = 6.4;
@@ -374,6 +375,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -387,6 +389,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
