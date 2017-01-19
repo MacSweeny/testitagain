@@ -24,7 +24,7 @@ class ProductTableViewCell: UITableViewCell {
             imageView?.image = UIImage.TIN_imageWithColor(.white)
             
             if let urlString = product?["image_url"] as? String, let imageUrl = URL(string: urlString) {
-                SessionManager.sharedInstance.fetchImage(for: imageUrl, completion: { image, error in
+                _ = SessionManager.sharedInstance.fetchImage(for: imageUrl, completion: { image, error in
                     if error == nil {
                         DispatchQueue.main.async(execute: {
                             self.imageView?.image = image
